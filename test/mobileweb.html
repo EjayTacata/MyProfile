@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Resume</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/style.css">
+
+        <script>
+            function myFunction(e) {
+              var x = document.getElementById(e);
+
+              if (x.style.display === "none") {
+                x.style.display = "block";
+              } else {
+                x.style.display = "none";
+              }
+            }
+        </script>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+    </head>
+    <body>
+        <header>
+              <div class = "NamePos">
+                <h1>Ernie John B. Tacata</h1>
+                <p><em>Software Engineer / Junior Full Stack Developer</em></p>
+            </div>
+            <div class="ContactDetails">
+                <p><span class="fa fa-location-arrow"></span><span> 2633 Dagupan Ext., Tondo, Manila</span></p>
+                <p><span><i class="fa fa-phone"></i></span><span> 09950182787</span>
+                <p><span><i class="fa fa-envelope-o"></i><span> tacata.ernie94@gmail.com</span></p>
+                
+            </div>
+            <div class = "profilePic">
+                <img src="images/Id-picture.png" alt="Ernie John's profile">
+            </div>
+        </header>
+        <div class="body2">
+            <div class="container">
+                <div class="leftSide">
+                    <article>
+                        <div onclick="myFunction('showHide')">
+                            <h3 class="headingSection">About</h3>
+                            <p id="showHide">Ernie John, also known as EJ, has an 8 years experiences working in the information technology industry. EJ has been
+                                assigned to different fields of information technology such as testing, developing and developer support but his 
+                                main expertise is Web development.
+                            </p>
+                        </div>
+                        <hr class="HRArticle">
+                        <div onclick="myFunction('showHide2')">
+                            <h3 class="headingSection">Educational background</h3>
+                            <div id="showHide2">
+                                <p class="EducInfo"><a href="https://udm.edu.ph/udm2/">Universidad De Manila</a></p>
+                                <p class="EducInfo">BS mathematics minor in Computer Science</p>
+                                <p class="EducInfo">SY: 2010-2014</p>
+                                <br>
+    
+                                <p class="EducInfo"><a href="https://en.wikipedia.org/wiki/Florentino_Torres_High_School">Florentino Torres High School</a></p>
+                                <p class="EducInfo">SY: 2006-2010</p>
+                                <br>
+
+                                <p class="EducInfo"><a href="https://www.facebook.com/FBESMain/">Benitez Elementary School</a></p>
+                                <p class="EducInfo">2000-2006</p>
+                                <br>
+                            </div>
+                        </div>
+                        <hr class="HRArticle">
+                    </article>
+                </div>
+                <div class="rightside">
+                    <article>
+                        <div>
+                            <h3 class="headingSection">Work Experience</h3>
+                            <div id="showHide3">
+                                <p><em>ACCENTURE, INC.: September 1, 2014 – November 20, 2022</em></p>
+                                <div class="slideshow-container">
+                                    <div class="mySlides fade">
+                                        <div class="workInfo-container-grid">
+                                            <div>
+                                                <p>2014-2017</p>
+                                                <p>Unit Tester</p>
+                                            </div>
+                                            <div>
+                                                <p><strong>Project: Denso Techno Philippines</strong><br>I have been assigned as a Unit Tester and rendered 3 years to this project. We are testing embedded software built using 
+                                                    C language for car parts and we have to ensure that it is working based on its design documentation. I manually created set 
+                                                    of inputs and outputs and simulated it with the embedded software. Reported if bugs and defects found. The technologies
+                                                    that we have used here are excel formulas, micros and C language.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="mySlides fade">
+                                        <div class="workInfo-container-grid">
+                                            <div>
+                                                <p>2017-2018</p>
+                                                <p>front-end Developer</p>
+                                            </div>
+                                            <div>
+                                                    <p><strong>Project: Insurance Group Ltd. | QBE</strong><br>I have been assigned as a front-end developer and rendered almost 1 years to this project. 
+                                                        My responsibles here are to implement the change requests for the website interface of the company, fix bugs found in the interface 
+                                                        and bugs reported by the quality assurance team and responsible for reviewing colleagues’ deliverables before promoting the codes to the production.
+                                                        The system life-cycle development that we used to this project is <strong>AGILE</strong> and the technologies that we have used are following:
+                                                        <ul>
+                                                            <li>J2EE (servlet and JSP)</li>
+                                                            <li>Springboots</li>
+                                                            <li>Basic web development tools such as HTML, CSS, and Javascript</li>
+                                                            <li>Angular</li>
+                                                            <li>Bootstrap</li>
+                                                        </ul>
+                                                    </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="mySlides fade">
+                                        <div class="workInfo-container-grid">
+                                            <div>
+                                                <p>2018-2022</p>
+                                                <p>Developer Support and Team Lead</p>
+                                            </div>
+                                            <div>
+                                                <p><strong>Project: Google Advertisement</strong><br>My role on this is project is a Developer support and a Team lead at the same time. I rendered more than
+                                                    4 years to this project. My responsible to this project are addressing advertisers’ concerns about the Google Advertising tools / APIs that they are using,
+                                                    responsible for troubleshooting and triaging the errors that advertisers encountered while implementing Google Advertising tools / APIs, giving them the best advice to fix the issue 
+                                                    and lastly, responsible for raising bugs to engineering team if the Google Advertising tools / APIs are not working according to its intended behavior.
+                                                    The technologies that we have used are following:
+                                                    <ul>
+                                                        <li>Java</li>
+                                                        <li>Javascript</li>
+                                                        <li>Google Ads API, Content API for Shopping and Google Ads scripts</li>
+                                                        <li>Google Cloud platform for the purpose of authenticating the said Google APIs</ul>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                                <br>
+                                
+                                <!-- The dots/circles -->
+                                <div style="text-align:center">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="HRArticle">
+                    </article>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <hr class="HRFooter">
+            <div class ="reach-out-socmed">
+                <h3>REACH OUT TO ME: </h3>
+                <div id="showHide1">
+                    <p><span><i  class="fa fa-facebook-official"></i></span><span>  erniejohn.tacata.3</span></p>
+                    <p><span><i  class="fa fa-instagram"></i></span><span><em>  Ejayatacat</em></span></p>
+                    <p><span><i  class="fa fa-linkedin"></i></span><span><em>  ernie-john-tacata-79197b259</em></span></p>    
+                </div>
+            </div>
+            <hr class="HRFooter">
+        </footer>
+    </body>
+</html>
